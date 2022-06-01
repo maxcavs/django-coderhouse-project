@@ -4,7 +4,7 @@ from django.forms import ModelForm
 from app_coder.models import Profesor
 
 
-class CourseForm(forms.Form):
+class CategoryForm(forms.Form):
     name = forms.CharField(max_length=40, min_length=3, label='Nombre')
     code = forms.IntegerField(label='Camada')
 

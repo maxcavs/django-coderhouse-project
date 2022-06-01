@@ -24,7 +24,7 @@
             <div class="container">
                 <a class="navbar-brand" href="{% url 'Home' %}">Home</a>
                 <a class="navbar-brand" href="{% url 'Profesors' %}">Profesores</a>
-                <a class="navbar-brand" href="{% url 'Courses' %}">Cursos</a>
+                <a class="navbar-brand" href="{% url 'Categories' %}">Categoria</a>
                 <a class="navbar-brand" href="{% url 'Students' %}">Estudiantes</a>
                 <a class="navbar-brand" href="{% url 'Homeworks' %}">Entregables</a>
                 <a class="btn btn-primary" href="#login">Iniciar</a>
@@ -39,16 +39,16 @@
                             <!-- Page heading-->
                             <h1 class="mb-5">Esta es nuestra Web Intermedia <br> Django-CoderHouse</h1>
                             <div class="text-lg-start text-white">
-                                {% block contenidoQueCambia %}
-
-                                {% endblock %}
+                              
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
-        <!-- Footer-->
+        {% block contenidoQueCambia %}
+
+        {% endblock %}
         <footer class="footer bg-light">
             <div class="container">
                 <div class="row">

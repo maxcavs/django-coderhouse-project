@@ -2,9 +2,9 @@
 {% load static %}
 {% block contenidoQueCambia %}
 
-<h2>Formulario para insersión de un nuevo curso</h2>
+<h2>Formulario para insersión de un nuevo categoria</h2>
 <hr></hr>
-{% if course_form.errors %}
+{% if category_form.errors %}
     <p style="color: red">Por favor revisar los datos, están mal</p>
 {% endif %}
 
@@ -12,10 +12,10 @@
     {% csrf_token %}
 
     <table>
-        {{ course_form.as_table }}
+        {{ category_form.as_table }}
     </table>
 
-    <input type="submit" class="btn btn-primary" value="Crear curso" />
+    <input type="submit" class="btn btn-primary" value="Crear categoria" />
 
 </form>
 

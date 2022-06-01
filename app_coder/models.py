@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class Course(models.Model):
+class Category(models.Model):
     name = models.CharField(max_length=40)
     code = models.IntegerField()
 
@@ -23,3 +23,23 @@ class Homework(models.Model):
     name = models.CharField(max_length=40)
     due_date = models.DateField()
     is_delivered = models.BooleanField()
+
+class Categoria(models.Model):
+    name = models.CharField(max_length=40)
+    code = models.IntegerField()
+
+class Entrenador(models.Model):
+    name = models.CharField(max_length=40)
+    last_name = models.CharField(max_length=40)
+    email = models.EmailField()
+    disciplina = models.CharField(max_length=40)
+
+class Deportista(models.Model):
+    name = models.CharField(max_length=40)
+    last_name = models.CharField(max_length=40)
+    disciplina = models.CharField(max_length=40)   
+
+class Entrenamiento(models.Model):
+    name = models.CharField(max_length=40)
+    due_date = models.DateField()
+    is_delivered = models.BooleanField()    
